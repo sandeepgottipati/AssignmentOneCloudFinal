@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'AssingnmentOneGottipati'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F32EC6D39B604028AFF1166E023F5D6F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AEFB298076894368B3AD322150619A15 }}
