@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Name: {{picture_by_name}}</h1><br>
+    <label for="image">Image:</label>
+    {% if picture_path is not none %}
+        <img src={{picture_path}} alt="Image" width="400" height="100">
+    {% else %}
+        <h6>Picture Not found for {{picture_by_name}}</h6>
+    {% endif %}
+</body>
+</html>

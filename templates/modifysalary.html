@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Salary</title>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item1, item2 in zip(user_list, salary_list) %}
+            <tr>
+              <td>{{ item1 }}</td>
+              <td>{{ item2 }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <form action="/modify/salary" method="post">
+        <label for="html">Enter Name to Modify the user Salary</label><br>
+        <input type="text" name="user_name"><br>
+        <label for="html">Enter Salary </label>
+        <input type="number" name="user_salary">
+        <button type="submit">submit</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <h1>Picutres whose Salary less than {{ amount }}</h1><br>
+    
+  
+    {% for picture,username  in zip(get_picture_salary,user_list) %}
+    <span>
+        <label for="name">Name:</label>
+        <h5>{{username}}</h5>
+    </span>    
+    <span>
+        <label for="image">Image:</label>
+        <img src={{picture}} alt="Image" width="400" height="100">
+        
+    </span>
+    <br>
+    {% endfor %}
+        
+</body>
+</html>

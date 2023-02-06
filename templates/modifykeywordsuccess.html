@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify_Success</title>
+</head>
+<body>
+    <h1>After Updating the keywords</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Keywords</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item1, item2 in zip(user_list, keywords_list) %}
+            <tr>
+              <td>{{ item1 }}</td>
+              <td>{{ item2 }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

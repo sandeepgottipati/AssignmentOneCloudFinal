@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+        <form action="/remove/user" method="post">
+            <label for="html">Enter Name to Delete</label><br>
+            <input type="text" name="delete_user">
+            <button type="submit">submit</button>
+        </form>
+        <h5>Available User List: </h5>
+        <div>
+            {% for name in current_list %}
+                <h4>{{name}}</h4>
+            {% endfor %}
+        </div>
+    </body>
+</html>

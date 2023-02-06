@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify</title>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Keywords</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item1, item2 in zip(user_list, keywords_list) %}
+            <tr>
+              <td>{{ item1 }}</td>
+              <td>{{ item2 }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <form action="/modify/keyword" method="post">
+        <label for="html">Enter Name to Modify the user Keywords</label><br>
+        <input type="text" name="user_name"><br>
+        <label for="html">Enter Keywords </label>
+        <input type="text" name="user_keyword">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
